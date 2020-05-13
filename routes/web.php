@@ -18,3 +18,4 @@ Route::get('/', function () {
 Route::get('/login', 'SignInController@index');
 Route::post('/login/authenticate', 'SignInController@authenticate');
 Route::get('/login/success', 'SignInController@success');
+Route::get('login/logout', 'SignInController@logout');

@@ -36,4 +36,10 @@ class SignInController extends Controller
     {
         return view("successfulLogin");
     }
+
+    function logout()
+    {
+        Auth::logout();
+        return redirect('main');
+    }
 }
