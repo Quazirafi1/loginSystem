@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', 'SignInController@Index');
+Route::get('/login', 'SignInController@index');
+Route::post('/login/authenticate', 'SignInController@authenticate');
+Route::get('/login/success', 'SignInController@success');

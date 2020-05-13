@@ -6,7 +6,7 @@
     <body>
         <h1 align="center">Please Login</h1>
         <div align= "center">
-        <form method="post" action="">
+        <form method="post" action="{{ url('/login/authenticate') }}">
             {{ csrf_field() }}
             <div>
              <label>Enter Email</label>
