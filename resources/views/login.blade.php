@@ -23,9 +23,26 @@
 
     </head>
     <body>
+        @if ($message = Session::get('error'))
+            <div class="alert alert-danger alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+             <div align="center">
+                <strong>{{ $message }}</strong>
+             </div>
+            </div>
+            @endif
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+            <ul>
 
+             @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+             @endforeach
+
+            </ul>
+            </div>
+        @endif
         <div class="container vertical-center container-fluid">
-
             <div class="row">
                 <div class="offset-md-6 col-md-4">
                     <h2>Login</h2>

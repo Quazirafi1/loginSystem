@@ -28,7 +28,7 @@ class SignInController extends Controller
         if (Auth::attempt($userData)) {
             return redirect('login/success');
         } else {
-            return "error";
+            return back()->with('error', 'Invalid User Or Password');
         }
     }
 
